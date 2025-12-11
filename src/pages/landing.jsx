@@ -2,12 +2,19 @@ import {
     Box,
     Button,
     Flex,
-    Stack
+    Heading,
+    Text,
+    Stack,
+    Wrap,
+    WrapItem
 } from "@chakra-ui/react";
-import watchImage from "../images/watch_image.png";
+import watchImage from "../images/bg_landing.png";
 import logo from "../images/tissot_logo_1.png";
+import bgElement from "../images/bg_elemen.png";
+import marcMarquezWatch from "../images/marc_marquez_watch.png";
 
 function Landing() {
+    const size = 1.2;
     return (
         <Flex   
             align="center"
@@ -20,20 +27,6 @@ function Landing() {
                 bgSize="cover"
                 direction="column"
                 h="100vh"
-                overflow="hidden"
-                pos="relative"
-                _before={{
-                    bgColor: "#2E1111",
-                    content: '""',
-                    clipPath: "polygon(100% 0, 50% 0, 100% 40%)",
-                    h: "55%",
-                    pointerEvents: "none",
-                    pos: "absolute",
-                    right: 0,
-                    top: 0,
-                    w: "45%",
-                    zIndex: 0
-                }}
                 w="50%"
             >
                 <Flex
@@ -78,6 +71,68 @@ function Landing() {
                         </Button>
                     </Stack>
                 </Flex>
+            </Stack>
+            <Stack
+                direction="column"
+                gapX={5}
+                gapY={20}
+                w="50%"
+            >
+                <Stack
+                    direction="column"
+                    mx="26%"
+                    spaceY={5}
+                >
+                    <Heading
+                        as="h1"
+                        fontWeight="extrabold"
+                        fontSize={48}
+                    >
+                        TISSOT T-RACE
+                    </Heading>
+                    <Text
+                        fontSize={16}
+                        textAlign="justify"
+                    >
+                        Freedom, the open road, and dedication: the T-Race is a watch of choice for every gentleman biker. Tissot found inspiration in the spirit of the sport to produce watches that reflect the dynamic nature of bikes themselves and the emotion of the sport.
+                    </Text>
+                </Stack>
+
+                <Wrap
+                    mx="10%"
+                >
+                    <WrapItem>
+                        <Flex
+                            align="end"
+                            justify="center"
+                            bgImg={`url(${bgElement})`}
+                            bgPos="center"
+                            bgRepeat="no-repeat"
+                            bgSize="cover"
+                            h={`${98*size}px`}
+                            w={`${163*size}px`}
+                        >
+                            <Flex
+                                align="end"
+                                bgImg={`url(${marcMarquezWatch})`}
+                                bgPos="left"
+                                bgRepeat="no-repeat"
+                                bgSize="contain"
+                                h="100%"
+                                w="100%"
+                            >
+                                <Text
+                                    fontSize="16px"
+                                    mx={3}
+                                    textAlign="right"
+                                    w="100%"
+                                >
+                                    Marc Marquez
+                                </Text>
+                            </Flex>
+                        </Flex>
+                    </WrapItem>
+                </Wrap>
             </Stack>
         </Flex>
     );

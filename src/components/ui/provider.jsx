@@ -15,10 +15,10 @@ const config = defineConfig({
     tokens: {
       fonts: {
         heading: {
-          value: '"Winky Sans", sans-serif'
+          value: '"Montserrat", sans-serif'
         },
         body: {
-          value: '"Winky Sans", sans-serif',
+          value: '"Montserrat", sans-serif',
         }
       }
     }
