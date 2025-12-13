@@ -25,7 +25,7 @@ const config = defineConfig({
   },
   globalCss: {
     "html, body": {
-      bgColor: "#2E1111",
+      bgColor: "#1B1716",
       color: "white",
       fontOpticalSizing: "auto",
       fontStyle: "normal",
